@@ -10,14 +10,13 @@ import { WordCount,
          MeanCalculate,
          ModeCalculate,
          MedianCalculate,
+         MostCommonLetter,
        } from './js/functions.js';
 import './App.css';
 
 import logo from './img/riverford-transparent.png';
 
   class App extends Component {
-
-
   constructor() {
     super();
     this.state = {
@@ -48,13 +47,6 @@ import logo from './img/riverford-transparent.png';
               const _data = event.target.result;
 
               scope.setState({
-                resultArray: [
-                  WordCount(_data),
-                  LineCount(_data),
-                  MeanCalculate(_data),
-                  ModeCalculate(_data),
-                  MedianCalculate(_data),
-                ],
                 resultObj: [
                   {
                     "title": "Word Count ",
@@ -73,13 +65,15 @@ import logo from './img/riverford-transparent.png';
                     "result": ModeCalculate(_data),
                   },
                   {
-                    "title": "Median - Middle number of letters per word: ",
+                    "title": "Median ?? ->> Number of letters per word in middle of set: ",
                     "result": MedianCalculate(_data),
+                  },
+                  {
+                    "title": "Most common letter ",
+                    "result": MostCommonLetter(_data),
                   },
                 ],
               });
-
-              // console.log("state", scope.state);
 
             }
          } else {
@@ -93,7 +87,6 @@ import logo from './img/riverford-transparent.png';
   }  
 
   render() {
-    console.log("test", this.state);
 
     return (
         <div className="App">
@@ -108,15 +101,14 @@ import logo from './img/riverford-transparent.png';
                 className="App-logo"
                 src={logo}
               />
-              <h1 className="display-4">Text file Statistical Analysis</h1>
-              <h2 className="display-5" >Please choose a .txt file:</h2>
+              <h1 className="bigTxt font-weight-lighter">Text file Statistical Analysis</h1>
+              <h2 className="medTxt font-weight-light" >Please choose a .txt file:</h2>
               <div
                 className="p-4"
               >
                   <input 
                     type="file" 
                     onChange={this.showFile} 
-                    // className="btn btn-primary btn-lg"
                     />
               </div>
               <div>
@@ -129,8 +121,10 @@ import logo from './img/riverford-transparent.png';
                               <div
                                 className="d-flex justify-content-between"
                               >
-                                  <div>{obj.title}</div>
-                                  <div className="text-info">{obj.result}</div>
+                                  <div
+                                    className="smlTxt"
+                                  >{obj.title}</div>
+                                  <div className="text-danger smlTxt">{obj.result}</div>
                               </div>
                           </li>
                       )

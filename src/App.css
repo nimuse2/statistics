@@ -6,6 +6,15 @@
   height: 20vmin;
   pointer-events: none;
 }
+.bigTxt{
+  font-size: 9vw;
+}
+.medTxt{
+  font-size: 4vw;
+}
+.smlText {
+  font-size: 2vw;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
