@@ -12,10 +12,8 @@ An SPA that calculates statistics about text files submitted to it and displays 
 ## Notes
 
 - Old/new jscript?
-- for, while, use modern syntax
 - windows/ mac carriage returns
 - special charicters not done
-- check median figure - should just be the length of the word at the middle of array?
 
 ## Median
 
