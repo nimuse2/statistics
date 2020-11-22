@@ -12,6 +12,17 @@ An SPA that calculates statistics about text files submitted to it and displays 
 ## Notes
 
 - Old/new jscript?
+- for, while, use modern syntax
 - windows/ mac carriage returns
 - special charicters not done
 - check median figure - should just be the length of the word at the middle of array?
+
+## Median
+
+     To find the median, the data should be arranged in order from least to greatest. 
+     If there is an even number of items in the data set, 
+     then the median is found by 
+     taking the mean (average) of the two middlemost numbers.
+     source:
+     https://www.mathgoodies.com/lessons/vol8/median#:~:text=To%20find%20the%20median%2C%20the%20data%20should%20be%20arranged%20in,of%20the%20two%20middlemost%20numbers.
+

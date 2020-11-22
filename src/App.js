@@ -65,8 +65,8 @@ import logo from './img/riverford-transparent.png';
                     "result": ModeCalculate(_data),
                   },
                   {
-                    "title": "Median ?? ->> Number of letters per word in middle of set: ",
-                    "result": MedianCalculate(_data),
+                    "title": "Median - Number of letters per word in middle of set: ",
+                    "result": MedianCalculate(_data),// add more definition below text??
                   },
                   {
                     "title": "Most common letter ",
@@ -100,6 +100,7 @@ import logo from './img/riverford-transparent.png';
               <img
                 className="App-logo"
                 src={logo}
+                alt="Riverford Logo"
               />
               <h1 className="bigTxt font-weight-lighter">Text file Statistical Analysis</h1>
               <h2 className="medTxt font-weight-light" >Please choose a .txt file:</h2>
