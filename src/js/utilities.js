@@ -34,33 +34,37 @@ export function getMaxIndex(_numArr){
 //string cleaning
 //returns array of all letters
 export function  stripStrLetters(str) {
-
+    //remove capitals, special characters, line endings and spaces
     var lowercaseStr = str.toLowerCase();
-    var strippedStr = lowercaseStr.replace(/\n|\r|\s/g, "");
-    var letterArr = Array.from(strippedStr);
+    var trimStr = lowercaseStr.trim();
+    var trimStrNoSpecials = trimStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");//?
+    //line ending/space different
+    var strippedEndingsStr = trimStrNoSpecials.replace(/\n|\r|\s/g, "");
+
+    var letterArr = Array.from(strippedEndingsStr);
 
     return letterArr;
 }
 
-//returns array of all words with spaces and carriage returns removed
+//returns array of all words 
 // NEED TO TEST ON WINDOWS!
 export function stripStrCleanArray(str){
-    //
-    var trimStr = str.trim();
-    var strippedStr = trimStr.replace(/\n|\r/g, " - ");
-    var strToArray = strippedStr.split(" ");
-    var noReturnArr = [];
+    //remove capitals, special characters, line endings and spaces
+    //ABSTRACT
+    var lowercaseStr = str.toLowerCase();
+    var trimStr = lowercaseStr.trim();
+    var trimStrNoSpecials = trimStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+    //line ending different
+    var strippedStr = trimStrNoSpecials.replace(/\n|\r/g, " ");
 
+    var strToArray = strippedStr.split(" ");
+
+    var noReturnArr = [];
+    // remove duds
     for(let ii =0; ii < strToArray.length; ii++){
-        //TERTIARY!!
-        // strToArray[ii] === "-" || strToArray[ii] === "" ? doThis() : noReturnArr.push(strToArray[ii]);
-        if(strToArray[ii] === "-" || strToArray[ii] === ""){
-            //null;
-            noReturnArr = noReturnArr;
-        }else{
-            noReturnArr.push(strToArray[ii]);
-        }
+        strToArray[ii] !== "" ? noReturnArr.push(strToArray[ii]) : noReturnArr = noReturnArr;
     }
+
     //
     return noReturnArr;
 }

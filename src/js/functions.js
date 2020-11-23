@@ -20,24 +20,18 @@ export function WordCount(str) {
   }
 
 export function LineCount(str) {
-    return str.split("\n").length;
+    return str.split("\n").length;//? pc/mac
 }
 
 export function MeanCalculate(str) {
 
     const cleanArr = stripStrCleanArray(str);// rename - cleanArr
-    const totalLetterLength = cleanArr.length;
-    const wordSet = [];
 
-    for(let i=0;i<totalLetterLength;i++){
-      wordSet.push(cleanArr[i].length);
-    }
+    const totalWordCount = cleanArr.length;
 
-    const wordTotal = wordSet.reduce(function(a, b){
-        return a + b;
-    }, 0);
-
-    const wordMean = (wordTotal/wordSet.length).toFixed(1);
+    const letterCount = stripStrLetters(str);
+    
+    const wordMean = (letterCount.length/totalWordCount).toFixed(1);
 
     return wordMean;
 
