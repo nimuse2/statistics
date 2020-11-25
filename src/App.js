@@ -3,7 +3,6 @@ import {Helmet} from "react-helmet";
 
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-// import Button from 'react-bootstrap/Button';
 
 import { WordCount, 
          LineCount,
@@ -17,14 +16,13 @@ import './App.css';
 import logo from './img/riverford-transparent.png';
 
   class App extends Component {
+
   constructor() {
     super();
     this.state = {
-      name: "React",
+      name: "Text Analysis",
       resultArray:[1,2,3,4,5,],
-      resultObj: [
-
-        ],
+      resultObj: [],
     };
   }
 

@@ -1,4 +1,5 @@
 //utilities.js
+
 // odd/even test
 export function medianEven(_arr, _middlePos){
     
@@ -30,15 +31,19 @@ export function getMaxIndex(_numArr){
     return maxIndex;
 
 }
-
+//
+//returns string with basic cleaning done.
+export function initialRegex(str){
+    var lowercaseStr = str.toLowerCase();
+    var trimStr = lowercaseStr.trim();
+    var trimStrNoSpecials = trimStr.replace(/[.,#!$%&;:{}=\-_`~()]/g,"");//?
+    return trimStrNoSpecials ;
+}
 //string cleaning
 //returns array of all letters
 export function  stripStrLetters(str) {
-    //remove capitals, special characters, line endings and spaces
-    var lowercaseStr = str.toLowerCase();
-    var trimStr = lowercaseStr.trim();
-    var trimStrNoSpecials = trimStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");//?
-    //line ending/space different
+
+    var trimStrNoSpecials = initialRegex(str);
     var strippedEndingsStr = trimStrNoSpecials.replace(/\n|\r|\s/g, "");
 
     var letterArr = Array.from(strippedEndingsStr);
@@ -49,22 +54,16 @@ export function  stripStrLetters(str) {
 //returns array of all words 
 // NEED TO TEST ON WINDOWS!
 export function stripStrCleanArray(str){
-    //remove capitals, special characters, line endings and spaces
-    //ABSTRACT
-    var lowercaseStr = str.toLowerCase();
-    var trimStr = lowercaseStr.trim();
-    var trimStrNoSpecials = trimStr.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-    //line ending different
+
+    var trimStrNoSpecials = initialRegex(str);
+
     var strippedStr = trimStrNoSpecials.replace(/\n|\r/g, " ");
-
     var strToArray = strippedStr.split(" ");
-
     var noReturnArr = [];
     // remove duds
     for(let ii =0; ii < strToArray.length; ii++){
-        strToArray[ii] !== "" ? noReturnArr.push(strToArray[ii]) : noReturnArr = noReturnArr;
+        strToArray[ii] !== "" ? noReturnArr.push(strToArray[ii]) : noReturnArr.push();
     }
 
-    //
     return noReturnArr;
 }
