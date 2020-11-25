@@ -14,6 +14,7 @@ An SPA that calculates statistics about text files submitted to it and displays 
 - Old/new jscript?
 - windows/ mac carriage returns
 - special charicters not done
+- /tests contains different .txt files for testing
 
 ## Median
 
