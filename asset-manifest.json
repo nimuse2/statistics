@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/statistics/static/css/main.59ff4d97.chunk.css",
-    "main.js": "/statistics/static/js/main.cb17879b.chunk.js",
-    "main.js.map": "/statistics/static/js/main.cb17879b.chunk.js.map",
-    "runtime-main.js": "/statistics/static/js/runtime-main.e3d39ec0.js",
-    "runtime-main.js.map": "/statistics/static/js/runtime-main.e3d39ec0.js.map",
+    "main.css": "/statistics/static/css/main.b3bf871a.chunk.css",
+    "main.js": "/statistics/static/js/main.9c73274e.chunk.js",
+    "main.js.map": "/statistics/static/js/main.9c73274e.chunk.js.map",
+    "runtime-main.js": "/statistics/static/js/runtime-main.6463d381.js",
+    "runtime-main.js.map": "/statistics/static/js/runtime-main.6463d381.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/statistics/static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.8687adde.chunk.js": "/statistics/static/js/2.8687adde.chunk.js",
-    "static/js/2.8687adde.chunk.js.map": "/statistics/static/js/2.8687adde.chunk.js.map",
-    "static/js/3.ce338574.chunk.js": "/statistics/static/js/3.ce338574.chunk.js",
-    "static/js/3.ce338574.chunk.js.map": "/statistics/static/js/3.ce338574.chunk.js.map",
+    "static/js/2.02274b8e.chunk.js": "/statistics/static/js/2.02274b8e.chunk.js",
+    "static/js/2.02274b8e.chunk.js.map": "/statistics/static/js/2.02274b8e.chunk.js.map",
+    "static/js/3.f903c0d3.chunk.js": "/statistics/static/js/3.f903c0d3.chunk.js",
+    "static/js/3.f903c0d3.chunk.js.map": "/statistics/static/js/3.f903c0d3.chunk.js.map",
     "index.html": "/statistics/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/statistics/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.59ff4d97.chunk.css.map": "/statistics/static/css/main.59ff4d97.chunk.css.map",
-    "static/js/2.8687adde.chunk.js.LICENSE.txt": "/statistics/static/js/2.8687adde.chunk.js.LICENSE.txt",
-    "static/media/riverford-transparent.9ba83d44.png": "/statistics/static/media/riverford-transparent.9ba83d44.png"
+    "static/css/main.b3bf871a.chunk.css.map": "/statistics/static/css/main.b3bf871a.chunk.css.map",
+    "static/js/2.02274b8e.chunk.js.LICENSE.txt": "/statistics/static/js/2.02274b8e.chunk.js.LICENSE.txt",
+    "static/media/riverford-invert-transparent.de1c7b0f.png": "/statistics/static/media/riverford-invert-transparent.de1c7b0f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e3d39ec0.js",
+    "static/js/runtime-main.6463d381.js",
     "static/css/2.20aa2d7b.chunk.css",
-    "static/js/2.8687adde.chunk.js",
-    "static/css/main.59ff4d97.chunk.css",
-    "static/js/main.cb17879b.chunk.js"
+    "static/js/2.02274b8e.chunk.js",
+    "static/css/main.b3bf871a.chunk.css",
+    "static/js/main.9c73274e.chunk.js"
   ]
 }
