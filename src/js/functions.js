@@ -1,8 +1,10 @@
 
-import {alphaBet,
+import {
+    alphaBet,
     alphaBetScore,
     theNumbers,
     theScore,
+    // theDigits,
     } from './data.js';
 
 import {getMaxIndex,
@@ -10,6 +12,7 @@ import {getMaxIndex,
         stripStrCleanArray,
         medianEven,
         medianOdd,
+        // isNumber,
         } from './utilities.js';
 
 //
@@ -75,10 +78,11 @@ export function MeanCalculate(str) {
   }
 
   export function MostCommonLetter(str) {
-
+        
         const letterArr = stripStrLetters(str);
 
         for (let i=0; i < letterArr.length; i++){
+
             for (let ii=0; ii < alphaBet.length; ii++){
                 alphaBetScore[ii] = (alphaBet[ii] === letterArr[i]) ? alphaBetScore[ii]+1 : alphaBetScore[ii];               
             }

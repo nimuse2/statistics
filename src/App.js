@@ -4,6 +4,9 @@ import {Helmet} from "react-helmet";
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
+import {resultObjTemplate,
+  } from './js/data.js';
+
 import { WordCount, 
          LineCount,
          MeanCalculate,
@@ -21,14 +24,17 @@ import logo from './img/riverford-transparent.png';
     super();
     this.state = {
       name: "Text Analysis",
-      resultArray:[1,2,3,4,5,],
-      resultObj: [],
+      resultObj: resultObjTemplate,
     };
   }
 
 
   showFile = () => {
-    if (window.File && window.FileReader && window.FileList && window.Blob) {
+    if (window.File 
+        && window.FileReader 
+        && window.FileList 
+        && window.Blob) {
+
          const scope = this;   
 
          var file = document.querySelector('input[type=file]').files[0];
@@ -36,42 +42,22 @@ import logo from './img/riverford-transparent.png';
 
          var textFile = /text.*/;
 
-        
-
          if (file.type.match(textFile)) {
             
             reader.onload = function (event) {
-
+              
               const _data = event.target.result;
 
+              scope.state.resultObj[0].result = WordCount(_data);
+              scope.state.resultObj[1].result = LineCount(_data);
+              scope.state.resultObj[2].result = MeanCalculate(_data);
+              scope.state.resultObj[3].result = ModeCalculate(_data);
+              scope.state.resultObj[4].result = MedianCalculate(_data);
+              scope.state.resultObj[5].result = MostCommonLetter(_data);
+
               scope.setState({
-                resultObj: [
-                  {
-                    "title": "Word Count ",
-                    "result": WordCount(_data),
-                  },
-                  {
-                    "title": "Line Count ",
-                    "result": LineCount(_data),
-                  },
-                  {
-                    "title": "Mean - Average number of letters per word: ",
-                    "result": MeanCalculate(_data),
-                  },
-                  {
-                    "title": "Mode - Most common number of letters per word: ",
-                    "result": ModeCalculate(_data),
-                  },
-                  {
-                    "title": "Median - Number of letters per word in middle of set: ",
-                    "result": MedianCalculate(_data),// add more definition below text??
-                  },
-                  {
-                    "title": "Most common letter ",
-                    "result": MostCommonLetter(_data),
-                  },
-                ],
-              });
+                ...scope.state,
+              })
 
             }
          } else {
@@ -80,7 +66,7 @@ import logo from './img/riverford-transparent.png';
          reader.readAsText(file);
 
    } else {
-      alert("Your browser is too old to support HTML5 File API");
+      alert("This browser does not support HTML5!");
    }
   }  
 
@@ -91,7 +77,7 @@ import logo from './img/riverford-transparent.png';
           <Helmet>
                 <title>Statistical Analysis</title>
             </Helmet>
-          <Container className="p-3">
+          <Container className="p-3 text-left">
             <Jumbotron
               className="App-header"
             >
@@ -100,10 +86,11 @@ import logo from './img/riverford-transparent.png';
                 src={logo}
                 alt="Riverford Logo"
               />
-              <h1 className="bigTxt font-weight-lighter">Text file Statistical Analysis</h1>
-              <h2 className="medTxt font-weight-light" >Please choose a .txt file:</h2>
+              <h1 className="font-weight-light">Text file Statistical Analysis</h1>
+              <p className="font-weight-light">This app will calculate and display statistics about text files submitted to it.<br/>See 'readme' for more information</p>
+              <p className="font-weight-light text-left" >Please choose a .txt file:</p>
               <div
-                className="p-4"
+                className="mb-3 text-left"
               >
                   <input 
                     type="file" 

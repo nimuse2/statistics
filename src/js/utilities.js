@@ -1,11 +1,12 @@
-//utilities.js
+// utilities.js
 
+// number tests
 // odd/even test
 export function medianEven(_arr, _middlePos){
     
     var middleLowerPos = _middlePos;
     var middleUpperPos = _middlePos + 1;
-    // array nudge - include 0
+
     middleLowerPos = middleLowerPos -1;
     middleUpperPos = middleUpperPos -1;
 
@@ -31,6 +32,9 @@ export function getMaxIndex(_numArr){
     return maxIndex;
 
 }
+
+//string tests
+
 //
 //returns string with basic cleaning done.
 export function initialRegex(str){
@@ -39,7 +43,7 @@ export function initialRegex(str){
     var trimStrNoSpecials = trimStr.replace(/[.,#!$%&;:{}=\-_`~()]/g,"");//?
     return trimStrNoSpecials ;
 }
-//string cleaning
+//
 //returns array of all letters
 export function  stripStrLetters(str) {
 
@@ -51,7 +55,7 @@ export function  stripStrLetters(str) {
     return letterArr;
 }
 
-//returns array of all words 
+// returns array of all words 
 // NEED TO TEST ON WINDOWS!
 export function stripStrCleanArray(str){
 

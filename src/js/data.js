@@ -1,5 +1,33 @@
-//data.js
-//data tables, variables, etc.
+// data.js
+// data templates, tables, variables, etc.
+
+// main state object
+export const resultObjTemplate = [
+    {
+      "title": "Word Count ",
+      "result": "0",
+    },
+    {
+      "title": "Line Count ",
+      "result": "0",
+    },
+    {
+      "title": "Mean - Average number of letters per word: ",
+      "result": "0",
+    },
+    {
+      "title": "Mode - Most common number of letters per word: ",
+      "result": "0",
+    },
+    {
+      "title": "Median - Number of letters per word in middle of set: ",
+      "result":"0",
+    },
+    {
+      "title": "Most common letter ",
+      "result": "0",
+    },
+  ]
 
 // testing for letter - arrays same size?
 export const alphaBet = [
@@ -9,8 +37,9 @@ export const alphaBet = [
     "m","n","o","p",
     "q","r","s","t",
     "u","v","w","x",
-    "y","z",
+    "y","z"
 ];
+
 
 export const alphaBetScore = [
     0,0,0,0,
@@ -20,6 +49,7 @@ export const alphaBetScore = [
     0,0,0,0,
     0,0,0,0,
     0,0,
+
 ];
 // testing for word length - arrays same size?
 export const theScore = [0,0,0,0,
