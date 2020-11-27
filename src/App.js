@@ -115,7 +115,7 @@ import logo from './img/riverford-invert-transparent.png';
                   {this.state.resultObj.map((obj,index) => 
                           <li 
                               key={index}
-                              className="list-group-item "
+                              className="list-group-item"
                           >
                               <div
                                 className="d-flex justify-content-between"
