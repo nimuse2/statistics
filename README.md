@@ -31,7 +31,7 @@ An SPA that calculates statistics about text files submitted to it and displays 
 - Numbers are not accounted for - regex?
 
 ### Definitions: Median
-     To find the median, the data should be arranged in order from least to greatest. 
+     To find the median, the data should be arranged in order from least to greatest.
      If there is an even number of items in the data set, 
      then the median is found by taking the mean (average) of the two middlemost numbers. (If even it is the middle 2 numbers divided by 2)
 
