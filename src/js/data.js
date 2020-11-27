@@ -1,5 +1,5 @@
 // data.js
-// data templates, tables, variables, etc.
+// data templates, tables, variables, etc. 
 
 // main state object
 export const resultObjTemplate = [

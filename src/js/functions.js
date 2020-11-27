@@ -78,7 +78,6 @@ export function MeanCalculate(str) {
         const letterArr = stripStrLetters(str);
 
         for (let i=0; i < letterArr.length; i++){
-
             for (let ii=0; ii < alphaBet.length; ii++){
                 alphaBetScore[ii] = (alphaBet[ii] === letterArr[i]) ? alphaBetScore[ii]+1 : alphaBetScore[ii];               
             }

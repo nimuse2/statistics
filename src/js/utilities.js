@@ -55,8 +55,7 @@ export function  stripStrLetters(str) {
     return letterArr;
 }
 
-// returns array of all words 
-// NEED TO TEST ON WINDOWS!
+// returns array of all words // NEED TO TEST ON WINDOWS!
 export function stripStrCleanArray(str){
 
     var trimStrNoSpecials = initialRegex(str);
