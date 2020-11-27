@@ -30,7 +30,7 @@ An SPA that calculates statistics about text files submitted to it and displays 
 - There is a 'lifecycle warning' bug that I get in my browser. 
 - Numbers are not accounted for - regex?
 
-## Median
+### Definitions: Median
      To find the median, the data should be arranged in order from least to greatest. 
      If there is an even number of items in the data set, 
      then the median is found by taking the mean (average) of the two middlemost numbers. (If even it is the middle 2 numbers divided by 2)
@@ -38,14 +38,14 @@ An SPA that calculates statistics about text files submitted to it and displays 
      reference:
      https://www.mathgoodies.com/lessons/vol8/median#:~:text=To%20find%20the%20median%2C%20the%20data%20should%20be%20arranged%20in,of%20the%20two%20middlemost%20numbers.
 
-## Mode
+### Definitions: Mode
     Put the numbers in order so that you can clearly see patterns.
     For example, lets say we have 2, 19, 44, 44, 44, 51, 56, 78, 86, 99, 99. The mode is the number that appears the most often. In this case: 44, which appears three times.
 
     reference:
     https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/mean-median-mode/
 
-## Mean
+### Definitions: Mean
     Step 1: Add the numbers up to get a total.
     Example: 2 +19 + 44 + 44 +44 + 51 + 56 + 78 + 86 + 99 + 99 = 622.  Set this number aside for a moment.
     Step 2: Count the amount of numbers in the series.
