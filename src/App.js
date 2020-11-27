@@ -16,7 +16,7 @@ import { WordCount,
        } from './js/functions.js';
 import './App.css';
 
-import logo from './img/riverford-transparent.png';
+import logo from './img/riverford-invert-transparent.png';
 
   class App extends Component {
 
@@ -75,20 +75,33 @@ import logo from './img/riverford-transparent.png';
     return (
         <div className="App">
           <Helmet>
-                <title>Statistical Analysis</title>
+                <title>Text Analysis</title>
             </Helmet>
+          <nav class="navbar-header navbar-dark bg-dark text-white">
+            <div className="text-left">
+              <img
+                  className="App-logo mr-3 ml-3"
+                  src={logo}
+                  alt="Riverford Logo"
+                /> 
+                Text file statistical Analysis v1.0
+              </div>
+          </nav>
           <Container className="p-3 text-left">
             <Jumbotron
               className="App-header"
             >
-              <img
-                className="App-logo"
-                src={logo}
-                alt="Riverford Logo"
-              />
-              <h1 className="font-weight-light">Text file Statistical Analysis</h1>
-              <p className="font-weight-light">This app will calculate and display statistics about text files submitted to it.<br/>See 'readme' for more information</p>
-              <p className="font-weight-light text-left" >Please choose a .txt file:</p>
+              {/* */}
+              <div>
+                <h1 className="font-weight-light">
+                  Text file Statistical Analysis
+                </h1>
+                <p className="font-weight-light mb-3">This app will calculate and display statistics about text files submitted to it.
+                <br/>
+                See 'readme' for more information
+                </p>
+                <p className="font-weight-normal text-left text-danger" >Please choose a .txt file:</p>
+              </div>
               <div
                 className="mb-3 text-left"
               >
@@ -116,6 +129,11 @@ import logo from './img/riverford-transparent.png';
                       )
                   }
               </ul>
+              </div>
+              <div>
+                <p className="mt-3 small">
+                  &copy; N.S. Walters 27|11|20
+                </p>
               </div>
             </Jumbotron>
           </Container>

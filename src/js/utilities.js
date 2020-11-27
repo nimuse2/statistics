@@ -1,6 +1,7 @@
 // utilities.js
 
 // number tests
+
 // odd/even test
 export function medianEven(_arr, _middlePos){
     
@@ -20,7 +21,7 @@ export function medianOdd(_arr, _middlePos){
     var middlePosRoundUpAndNudgeDown = Math.ceil(_middlePos - 1);
     return _arr[middlePosRoundUpAndNudgeDown];
 }
-//
+
 //returns the index with the highest numnber in array..
 export function getMaxIndex(_numArr){
     var maxNum = Math.max(..._numArr);
@@ -35,7 +36,6 @@ export function getMaxIndex(_numArr){
 
 //string tests
 
-//
 //returns string with basic cleaning done.
 export function initialRegex(str){
     var lowercaseStr = str.toLowerCase();
@@ -43,7 +43,7 @@ export function initialRegex(str){
     var trimStrNoSpecials = trimStr.replace(/[.,#!$%&;:{}=\-_`~()]/g,"");//?
     return trimStrNoSpecials ;
 }
-//
+
 //returns array of all letters
 export function  stripStrLetters(str) {
 
@@ -64,7 +64,7 @@ export function stripStrCleanArray(str){
     var strippedStr = trimStrNoSpecials.replace(/\n|\r/g, " ");
     var strToArray = strippedStr.split(" ");
     var noReturnArr = [];
-    // remove duds
+
     for(let ii =0; ii < strToArray.length; ii++){
         strToArray[ii] !== "" ? noReturnArr.push(strToArray[ii]) : noReturnArr.push();
     }

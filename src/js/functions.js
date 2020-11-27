@@ -4,7 +4,6 @@ import {
     alphaBetScore,
     theNumbers,
     theScore,
-    // theDigits,
     } from './data.js';
 
 import {getMaxIndex,
@@ -12,10 +11,7 @@ import {getMaxIndex,
         stripStrCleanArray,
         medianEven,
         medianOdd,
-        // isNumber,
         } from './utilities.js';
-
-//
 
 export function WordCount(str) { 
     const cleanArr = stripStrCleanArray(str);
@@ -23,7 +19,7 @@ export function WordCount(str) {
   }
 
 export function LineCount(str) {
-    return str.split("\n").length;//? pc/mac
+    return str.split("\n").length;//? pc/mac line endings?
 }
 
 export function MeanCalculate(str) {

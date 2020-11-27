@@ -3,28 +3,31 @@
 An SPA that calculates statistics about text files submitted to it and displays those statistics in a useful form. The solution should be built using modern JavaScript.
 
 ## Test Requirements
-
 - Whitespace delimited word count
 - Line count
 - Mean(to 1decimal place), mode and median letters per word
 - Most common letter
 
-## Build and run
+## Additional Statistics
+- Extra fuctions could be added to ```../js/functions.js```
 
+## Build and run
 - Fork this repository
 - ensure npm/ yarn installed on your machine
 - navigate to the root folder in terminal
 - type ```yarn start' or 'npm run build'```
 
 ## Notes
-
 - Tested on Mac. Need to test for Windows carraiage returns and hidden characters
-- ../tests contains different .txt files I used for testing
+- ```../tests``` contains different .txt files I used for testing
 - Am using a loop of 20 characters for words.. this could cause issues for really big words. Could easily be increased, or maybe there is a better way to do this? 
 - The main maths functions are in ```../js/functions.js``` 
 - Small utility functions are in ```../js/utilities.js``` 
 - there is also a file with the basic data tables: ```../js/data.js```
-- There is a 'lefecycle warning' bug that I get in my browser. 
+- Clean refresh before load new file
+
+## improvements
+- There is a 'lifecycle warning' bug that I get in my browser. 
 - Numbers are not accounted for - regex?
 
 ## Median
