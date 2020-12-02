@@ -34,6 +34,17 @@ export function getMaxIndex(_numArr) {
 
 //string tests
 
+export function isEurope(str) {
+  let r = /^[a-zA-Z0-9]+$/,
+    i = 10; // this could be random - or a selection
+
+  return r.test(str[i]) ? true : false;
+}
+
+export function isEmpty(str) {
+  return str === "" ? true : false;
+}
+
 //returns string with basic cleaning done.
 export function initialRegex(str) {
   let lowercaseStr = str.toLowerCase();

@@ -2,6 +2,15 @@
 
 An SPA that calculates statistics about text files submitted to it and displays those statistics in a useful form. The solution should be built using modern JavaScript.
 
+## Feedback Response
+- Added Test for empty file
+- Added Test for Hebrew file
+- It tests 1 character in the document. Perhaps a selection would be better - or whole thing - could be a mix of languages?
+- Added ESLint
+- Added Prettify
+- Look at assumptions as much as possible, even something as
+seemingly simple as the alphabet can be more complicated than you assume, but that needn't prevent you from finding a general solution
+
 ## Test Requirements
 - Whitespace delimited word count
 - Line count

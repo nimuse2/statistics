@@ -27,6 +27,10 @@ export const resultObjTemplate = [
     title: "Most common letter ",
     result: "0",
   },
+  {
+    title: "Error Messages ",
+    result: "",
+  },
 ];
 
 // testing for letter - arrays same size?

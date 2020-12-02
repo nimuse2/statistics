@@ -6,6 +6,7 @@ import {
   stripStrCleanArray,
   medianEven,
   medianOdd,
+  isEurope,
 } from "./utilities.js";
 
 export function WordCount(str) {
@@ -71,14 +72,18 @@ export function MedianCalculate(str) {
 export function MostCommonLetter(str) {
   const letterArr = stripStrLetters(str);
 
-  for (let i = 0; i < letterArr.length; i++) {
-    for (let ii = 0; ii < alphaBet.length; ii++) {
-      alphaBetScore[ii] =
-        alphaBet[ii] === letterArr[i]
-          ? alphaBetScore[ii] + 1
-          : alphaBetScore[ii];
+  console.log("is Europe: ", isEurope(letterArr));
+  if (isEurope(letterArr)) {
+    for (let i = 0; i < letterArr.length; i++) {
+      for (let ii = 0; ii < alphaBet.length; ii++) {
+        alphaBetScore[ii] =
+          alphaBet[ii] === letterArr[i]
+            ? alphaBetScore[ii] + 1
+            : alphaBetScore[ii];
+      }
     }
+    return alphaBet[getMaxIndex(alphaBetScore)];
+  } else {
+    return "Non-european text!";
   }
-
-  return alphaBet[getMaxIndex(alphaBetScore)];
 }

@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 import { resultObjTemplate } from "./js/data.js";
+import { isEmpty } from "./js/utilities.js";
 
 import {
   WordCount,
@@ -31,6 +32,8 @@ class App extends Component {
     if (window.File && window.FileReader && window.FileList && window.Blob) {
       var scope = this;
 
+      scope.StateCopy = Object.assign({}, this.state);
+
       var file = document.querySelector("input[type=file]").files[0];
       var reader = new FileReader();
 
@@ -39,20 +42,29 @@ class App extends Component {
       if (file.type.match(textFile)) {
         reader.onload = function (event) {
           const _data = event.target.result;
+          //empty test
+          console.log("EMPTY: ", isEmpty(_data));
 
-          scope.state.resultObj[0].result = WordCount(_data);
-          scope.state.resultObj[1].result = LineCount(_data);
-          scope.state.resultObj[2].result = MeanCalculate(_data);
-          scope.state.resultObj[3].result = ModeCalculate(_data);
-          scope.state.resultObj[4].result = MedianCalculate(_data);
-          scope.state.resultObj[5].result = MostCommonLetter(_data);
-
+          if (!isEmpty(_data)) {
+            scope.StateCopy.resultObj[0].result = WordCount(_data);
+            scope.StateCopy.resultObj[1].result = LineCount(_data);
+            scope.StateCopy.resultObj[2].result = MeanCalculate(_data);
+            scope.StateCopy.resultObj[3].result = ModeCalculate(_data);
+            scope.StateCopy.resultObj[4].result = MedianCalculate(_data);
+            scope.StateCopy.resultObj[5].result = MostCommonLetter(_data);
+          } else {
+            scope.StateCopy.resultObj[6].result = "Error - Empty file";
+          }
           scope.setState({
-            ...scope.state,
+            ...scope.StateCopy,
           });
         };
       } else {
-        console.log("Error - Please make sure it is a .txt file");
+        scope.StateCopy.resultObj[6].result =
+          "Error - Please make sure it is .txt file ";
+        scope.setState({
+          ...scope.StateCopy,
+        });
       }
       reader.readAsText(file);
     } else {
@@ -88,7 +100,7 @@ class App extends Component {
                 <br />
                 See 'readme' for more information
               </p>
-              <p className="font-weight-normal text-left text-danger">
+              <p className="font-weight-normal text-left text-success">
                 Please choose a .txt file:
               </p>
             </div>
