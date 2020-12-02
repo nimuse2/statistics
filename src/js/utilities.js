@@ -21,22 +21,11 @@ export function medianOdd(_arr, _middlePos) {
   return _arr[middlePosRoundUpAndNudgeDown];
 }
 
-//returns the index with the highest numnber in array..
-export function getMaxIndex(_numArr) {
-  let maxNum = Math.max(..._numArr);
-  let maxIndex = 0;
-
-  for (let ii = 0; ii < _numArr.length; ii++) {
-    maxIndex = _numArr[ii] === maxNum ? ii : maxIndex;
-  }
-  return maxIndex;
-}
-
 //string tests
 
 export function isEurope(str) {
   let r = /^[a-zA-Z0-9]+$/,
-    i = 10; // this could be random - or a selection
+    i = 10; // this could be random - or a selection?
 
   return r.test(str[i]) ? true : false;
 }

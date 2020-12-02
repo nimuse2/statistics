@@ -1,7 +1,4 @@
-import { alphaBet, alphaBetScore, theNumbers, theScore } from "./data.js";
-
 import {
-  getMaxIndex,
   stripStrLetters,
   stripStrCleanArray,
   medianEven,
@@ -29,23 +26,16 @@ export function MeanCalculate(str) {
 
 export function ModeCalculate(str) {
   const strToArray = str.split(" ");
-  const totalLettersLength = strToArray.length;
-
   const wordLengths = [];
-  for (let i = 0; i < totalLettersLength; i++) {
-    wordLengths.push(strToArray[i].length);
-  }
+  strToArray.forEach((ob) => {
+    wordLengths.push(ob.length);
+  });
 
-  for (let i = 0; i < wordLengths.length; i++) {
-    for (let iii = 0; iii < theNumbers.length - 1; iii++) {
-      theScore[iii] =
-        theNumbers[iii] === wordLengths[i] ? theScore[iii] + 1 : theScore[iii];
-    }
-  }
+  let obj = {};
+  wordLengths.forEach((char) => (obj[char] = obj[char] + 1 || 1));
+  let returnObj = Object.keys(obj).reduce((a, b) => (obj[a] >= obj[b] ? a : b));
 
-  var highestScoreIndex = getMaxIndex(theScore);
-
-  return theNumbers[highestScoreIndex];
+  return returnObj;
 }
 
 export function MedianCalculate(str) {
@@ -72,17 +62,13 @@ export function MedianCalculate(str) {
 export function MostCommonLetter(str) {
   const letterArr = stripStrLetters(str);
 
-  console.log("is Europe: ", isEurope(letterArr));
   if (isEurope(letterArr)) {
-    for (let i = 0; i < letterArr.length; i++) {
-      for (let ii = 0; ii < alphaBet.length; ii++) {
-        alphaBetScore[ii] =
-          alphaBet[ii] === letterArr[i]
-            ? alphaBetScore[ii] + 1
-            : alphaBetScore[ii];
-      }
+    function maxChar(str) {
+      const obj = {};
+      letterArr.forEach((char) => (obj[char] = obj[char] + 1 || 1));
+      return Object.keys(obj).reduce((a, b) => (obj[a] >= obj[b] ? a : b));
     }
-    return alphaBet[getMaxIndex(alphaBetScore)];
+    return maxChar(str);
   } else {
     return "Non-european text!";
   }

@@ -42,8 +42,6 @@ class App extends Component {
       if (file.type.match(textFile)) {
         reader.onload = function (event) {
           const _data = event.target.result;
-          //empty test
-          console.log("EMPTY: ", isEmpty(_data));
 
           if (!isEmpty(_data)) {
             scope.StateCopy.resultObj[0].result = WordCount(_data);
