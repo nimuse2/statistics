@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
-test("renders learn react link", () => {
+test("file upload", () => {
   render(<App />);
-  const linkElement = screen.getByText(/statistics/i);
+  const linkElement = screen.getByText(/Statistical/i);
   expect(linkElement).toBeInTheDocument();
 });
